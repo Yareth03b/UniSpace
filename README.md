@@ -5,7 +5,11 @@
 </p>
 
 <p align="center">
+<<<<<<< HEAD
   <strong>Tu espacio academico personal — Organiza cursos, tareas, horarios y cuadernos en una galaxia interactiva.</strong>
+=======
+  <strong>Tu espacio académico personal — Organiza cursos, tareas, horarios y cuadernos en una galaxia interactiva.</strong>
+>>>>>>> d823d3d01a0461a16ed74b47a7e59b7a42168ab9
 </p>
 
 <p align="center">
@@ -16,6 +20,7 @@
 
 ---
 
+<<<<<<< HEAD
 ## Tabla de Contenidos
 
 - [Sinopsis](#sinopsis)
@@ -32,6 +37,24 @@
 ---
 
 ## Sinopsis
+=======
+## 📖 Tabla de Contenidos
+
+- [🚀 Sinopsis](#sinopsis)
+- [🛠 Tecnologías](#tecnologías)
+- [✨ Características](#características)
+- [📦 Instalación](#instalación)
+- [🚦 Ejecución Rápida](#ejecución-rápida)
+- [📚 Uso por Módulo](#-uso-por-módulo)
+- [🌐 Estado Actual](#-estado-actual)
+- [📜 Scripts Disponibles](#scripts-disponibles)
+- [🤝 Contribución](#-contribución)
+- [📄 Licencia](#-licencia)
+
+---
+
+## 🚀 Sinopsis
+>>>>>>> d823d3d01a0461a16ed74b47a7e59b7a42168ab9
 
 **UniSpace** es una aplicación web personal de gestión académica construida con Angular 22 y Supabase. Proporciona un entorno integrado para:
 
@@ -47,7 +70,11 @@ El diseño sigue el tema **"Cosmos Profondo"**: fondos de nebulosa WebGL interac
 
 ---
 
+<<<<<<< HEAD
 ## Tecnologías
+=======
+## 🛠 Tecnologías
+>>>>>>> d823d3d01a0461a16ed74b47a7e59b7a42168ab9
 
 | Categoría | Tecnología | Versión |
 |-----------|------------|---------|
@@ -61,7 +88,11 @@ El diseño sigue el tema **"Cosmos Profondo"**: fondos de nebulosa WebGL interac
 
 ---
 
+<<<<<<< HEAD
 ## Características
+=======
+## ✨ Características
+>>>>>>> d823d3d01a0461a16ed74b47a7e59b7a42168ab9
 
 | Característica | Descripción |
 |----------------|-------------|
@@ -80,7 +111,11 @@ El diseño sigue el tema **"Cosmos Profondo"**: fondos de nebulosa WebGL interac
 
 ---
 
+<<<<<<< HEAD
 ## Instalación
+=======
+## 📦 Instalación
+>>>>>>> d823d3d01a0461a16ed74b47a7e59b7a42168ab9
 
 ### Prerrequisitos
 
@@ -164,7 +199,11 @@ El diseño sigue el tema **"Cosmos Profondo"**: fondos de nebulosa WebGL interac
 
 ---
 
+<<<<<<< HEAD
 ## Ejecución Rápida
+=======
+## 🚦 Ejecución Rápida
+>>>>>>> d823d3d01a0461a16ed74b47a7e59b7a42168ab9
 
 | Comando | Descripción |
 |---------|-------------|
@@ -175,7 +214,11 @@ El diseño sigue el tema **"Cosmos Profondo"**: fondos de nebulosa WebGL interac
 
 ---
 
+<<<<<<< HEAD
 ## Uso por Módulo
+=======
+## 📚 Uso por Módulo
+>>>>>>> d823d3d01a0461a16ed74b47a7e59b7a42168ab9
 
 ### Autenticación (`/auth`)
 
@@ -224,7 +267,11 @@ El diseño sigue el tema **"Cosmos Profondo"**: fondos de nebulosa WebGL interac
 
 ---
 
+<<<<<<< HEAD
 ## Estado Actual
+=======
+## 🌐 Estado Actual
+>>>>>>> d823d3d01a0461a16ed74b47a7e59b7a42168ab9
 
 > **⚠️ Esta aplicación está finalizada con interfaz funcional, pero aún requiere conectar Supabase completamente.**
 
@@ -251,7 +298,11 @@ El diseño sigue el tema **"Cosmos Profondo"**: fondos de nebulosa WebGL interac
 
 ---
 
+<<<<<<< HEAD
 ## Scripts Disponibles
+=======
+## 📜 Scripts Disponibles
+>>>>>>> d823d3d01a0461a16ed74b47a7e59b7a42168ab9
 
 | Script | Descripción |
 |--------|-------------|
@@ -262,7 +313,11 @@ El diseño sigue el tema **"Cosmos Profondo"**: fondos de nebulosa WebGL interac
 
 ---
 
+<<<<<<< HEAD
 ## Contribución
+=======
+## 🤝 Contribución
+>>>>>>> d823d3d01a0461a16ed74b47a7e59b7a42168ab9
 
 Las contribuciones son bienvenidas. Por favor:
 
@@ -282,7 +337,11 @@ Las contribuciones son bienvenidas. Por favor:
 
 ---
 
+<<<<<<< HEAD
 ## Licencia
+=======
+## 📄 Licencia
+>>>>>>> d823d3d01a0461a16ed74b47a7e59b7a42168ab9
 
 Este proyecto está bajo la **Licencia MIT**.
 
@@ -290,25 +349,42 @@ Este proyecto está bajo la **Licencia MIT**.
 
 ---
 
+<<<<<<< HEAD
 ## Capturas de Pantalla
+=======
+## 📸 Capturas de Pantalla
+>>>>>>> d823d3d01a0461a16ed74b47a7e59b7a42168ab9
 
 <details>
   <summary>Ver capturas</summary>
 
 | Módulo | Descripción |
 |--------|-------------|
+<<<<<<< HEAD
 | Dashboard | Página principal con galaxia interactiva y resumen rápido |
 | Courses | Grid de cursos con badges de color y acciones |
 | Tasks | Lista de tareas con checkbox y estado vencido |
 | Schedule | Cuadrícula horaria Lunes-Viernes con bloques superpuestos |
 | Notebooks | Gestión de cuadernos por curso |
 | Sidebar | Menú lateral colapsable en mobile |
+=======
+| <kbd>Dashboard</kbd> | Página principal con galaxia interactiva y resumen rápido |
+| <kbd>Courses</kbd> | Grid de cursos con badges de color y acciones |
+| <kbd>Tasks</kbd> | Lista de tareas con checkbox y estado vencido |
+| <kbd>Schedule</kbd> | Cuadrícula horaria Lunes-Viernes con bloques superpuestos |
+| <kbd>Notebooks</kbd> | Gestión de cuadernos por curso |
+| <kbd>Sidebar</kbd> | Menú lateral colapsable en mobile |
+>>>>>>> d823d3d01a0461a16ed74b47a7e59b7a42168ab9
 
 </details>
 
 ---
 
+<<<<<<< HEAD
 ## Preguntas Frecuentes
+=======
+## 🙋‍♂️ Preguntas Frecuentes
+>>>>>>> d823d3d01a0461a16ed74b47a7e59b7a42168ab9
 
 **¿Necesito configurar Supabase para usar la app?**
 
@@ -328,6 +404,12 @@ Los colores principales se definen en las variables CSS `--primary`, `--primary-
 
 ---
 
+<<<<<<< HEAD
 ### Hecho con amor por UniSpace
 
 *Sigue el viaje academico entre las estrellas.*
+=======
+### Hecho con ❤️ por UniSpace
+
+*Sigue el viaje académico entre las estrellas.*
+>>>>>>> d823d3d01a0461a16ed74b47a7e59b7a42168ab9
