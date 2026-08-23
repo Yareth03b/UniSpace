@@ -27,7 +27,7 @@ import { HaloDirective } from '../../shared/directives/halo.directive';
             </g>
           </svg>
         </div>
-        <p class="eyebrow">UNISPACE · COSMOS PROFONDO</p>
+        <p class="eyebrow">UNISPACE</p>
         <h1>{{ registering() ? 'Crea tu cuenta' : 'Bienvenido' }}</h1>
         <span class="sub">{{ registering()
           ? 'Tus cursos, horario y avances se guardarán en tu cuenta.'

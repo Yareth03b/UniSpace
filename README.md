@@ -45,7 +45,7 @@
 - Calendario académico visual
 - Configuración de perfil e iniciales
 
-El diseño sigue el tema **"Cosmos Profundo"**: fondos de nebulosa WebGL interactivos, esquinas de vidrio esmerilado, paleta índigo-cian y efectos de interacción sutiles.
+El diseño cuenta con fondos de nebulosa WebGL interactivos, esquinas de vidrio esmerilado, paleta índigo-cian y efectos de interacción sutiles.
 
 ---
 
@@ -233,7 +233,7 @@ El diseño sigue el tema **"Cosmos Profundo"**: fondos de nebulosa WebGL interac
 - Arquitectura Angular 22 con Signals y componentes Standalone.
 - Servicios principales: `AuthService`, `AppStateService`, `NotebookService`.
 - Interfaz completa con 7 vistas navegables.
-- Shader WebGL "Cosmos Profundo" integrado.
+- Shader WebGL integrado con fondos de nebulosa interactivos.
 - Directiva de interacción tipo halo, barra lateral con efecto translúcido y diseño responsive.
 - Soporte para datos de demostración en `AppStateService`.
 
