@@ -1,15 +1,11 @@
-# UniSpace · Cosmos Profondo
+# UniSpace
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/unispace/readme-assets/main/unispace-logo.svg" alt="UniSpace Logo" width="120">
 </p>
 
 <p align="center">
-<<<<<<< HEAD
-  <strong>Tu espacio academico personal — Organiza cursos, tareas, horarios y cuadernos en una galaxia interactiva.</strong>
-=======
   <strong>Tu espacio académico personal — Organiza cursos, tareas, horarios y cuadernos en una galaxia interactiva.</strong>
->>>>>>> d823d3d01a0461a16ed74b47a7e59b7a42168ab9
 </p>
 
 <p align="center">
@@ -20,41 +16,24 @@
 
 ---
 
-<<<<<<< HEAD
 ## Tabla de Contenidos
 
 - [Sinopsis](#sinopsis)
-- [Tecnologias](#tecnologias)
-- [Caracteristicas](#caracteristicas)
-- [Instalacion](#instalacion)
-- [Ejecucion Rápida](#ejecucion-rápida)
+- [Tecnologías](#tecnologías)
+- [Características](#características)
+- [Instalación](#instalación)
+- [Ejecución Rápida](#ejecución-rápida)
 - [Uso por Módulo](#uso-por-módulo)
 - [Estado Actual](#estado-actual)
 - [Scripts Disponibles](#scripts-disponibles)
-- [Contribución](#-contribución)
-- [Licencia](#-licencia)
+- [Contribución](#contribución)
+- [Licencia](#licencia)
+- [Capturas de Pantalla](#capturas-de-pantalla)
+- [Preguntas Frecuentes](#preguntas-frecuentes)
 
 ---
 
 ## Sinopsis
-=======
-## 📖 Tabla de Contenidos
-
-- [🚀 Sinopsis](#sinopsis)
-- [🛠 Tecnologías](#tecnologías)
-- [✨ Características](#características)
-- [📦 Instalación](#instalación)
-- [🚦 Ejecución Rápida](#ejecución-rápida)
-- [📚 Uso por Módulo](#-uso-por-módulo)
-- [🌐 Estado Actual](#-estado-actual)
-- [📜 Scripts Disponibles](#scripts-disponibles)
-- [🤝 Contribución](#-contribución)
-- [📄 Licencia](#-licencia)
-
----
-
-## 🚀 Sinopsis
->>>>>>> d823d3d01a0461a16ed74b47a7e59b7a42168ab9
 
 **UniSpace** es una aplicación web personal de gestión académica construida con Angular 22 y Supabase. Proporciona un entorno integrado para:
 
@@ -64,22 +43,18 @@
 - Horario semanal interactivo (Lunes-Viernes)
 - Cuadernos digitales por curso con páginas infinitas
 - Calendario académico visual
-- Configuración de perfil y iniciales
+- Configuración de perfil e iniciales
 
-El diseño sigue el tema **"Cosmos Profondo"**: fondos de nebulosa WebGL interactivos, esquinas vidrio esmerilado, paleta índigo-cian y efectos de hover sutiles.
+El diseño sigue el tema **"Cosmos Profundo"**: fondos de nebulosa WebGL interactivos, esquinas de vidrio esmerilado, paleta índigo-cian y efectos de interacción sutiles.
 
 ---
 
-<<<<<<< HEAD
 ## Tecnologías
-=======
-## 🛠 Tecnologías
->>>>>>> d823d3d01a0461a16ed74b47a7e59b7a42168ab9
 
 | Categoría | Tecnología | Versión |
-|-----------|------------|---------|
+|---|---|---|
 | Framework | Angular | 22.1.0 |
-| Idioma | TypeScript | ~6.0.2 |
+| Lenguaje | TypeScript | ~6.0.2 |
 | Base de Datos | Supabase | 2.112.3 |
 | UI | CSS Custom Properties, Flexbox Grid | — |
 | Gráficos | WebGL Shader (simplex noise FBM) | — |
@@ -88,40 +63,32 @@ El diseño sigue el tema **"Cosmos Profondo"**: fondos de nebulosa WebGL interac
 
 ---
 
-<<<<<<< HEAD
 ## Características
-=======
-## ✨ Características
->>>>>>> d823d3d01a0461a16ed74b47a7e59b7a42168ab9
 
 | Característica | Descripción |
-|----------------|-------------|
-| **Autenticación Completa** | Registro, login, recuperación de contraseña con Supabase Auth |
-| **Gestión de Cursos** | Crear/editar/eliminar cursos con colores identificativos y progreso |
-| **Sistema de Tareas** | Tareas con fechas límite, filtros por curso, estado pendiente/completado, indicador de vencido |
-| **Horario Semanal** | Cuadrícula Lunes-Viernes, arrastrar bloques por hora y día, eliminación |
-| **Cuadernos Digitales** | Notebooks por curso con guardar/cargar páginas (Supabase + localStorage fallback) |
+|---|---|
+| **Autenticación Completa** | Registro, inicio de sesión y recuperación de contraseña con Supabase Auth |
+| **Gestión de Cursos** | Creación, edición y eliminación de cursos con colores identificativos y seguimiento de progreso |
+| **Sistema de Tareas** | Tareas con fechas límite, filtros por curso, estado pendiente/completado e indicador de vencimiento |
+| **Horario Semanal** | Cuadrícula de lunes a viernes con asignación de bloques por hora y gestión de clases |
+| **Cuadernos Digitales** | Cuadernos por curso con persistencia de páginas (Supabase con respaldo en localStorage) |
 | **Calendario Integrado** | Vista de calendario académico |
-| **Fondo Galaxia WebGL** | Shader personalizado con ruido simplex, parallax de mouse, polvo de estrellas titilante |
-| **Efecto Halo en Clics** | Ripple circular cian→turquesa al hacer clic en botones |
-| **Sidebar Vidrio** | Menú lateral con backdrop-filter, estado abierto/cerrado, responsive |
-| **Responsive Design** | Adaptativo desde 320px hasta 1920px+, sidebar colapsable |
-| **Modo Reduced Motion** | WAI-ARIA compliant, respeta `prefers-reduced-motion` |
-| **Datos de Demostración** | Interfaz funcional con datos simulados hasta conectar Supabase |
+| **Fondo Galaxia WebGL** | Shader personalizado con ruido simplex, efecto parallax con el cursor y partículas |
+| **Efecto Halo en Clics** | Efecto visual circular en elementos interactivos |
+| **Sidebar Translúcido** | Menú lateral con efecto glassmorphism, estados expandido/colapsado y soporte responsive |
+| **Diseño Adaptativo** | Compatible con resoluciones desde 320px hasta pantallas ultra anchas |
+| **Modo de Movimiento Reducido** | Cumplimiento WAI-ARIA respetando la preferencia `prefers-reduced-motion` |
+| **Datos de Demostración** | Interfaz totalmente funcional con datos simulados en modo local |
 
 ---
 
-<<<<<<< HEAD
 ## Instalación
-=======
-## 📦 Instalación
->>>>>>> d823d3d01a0461a16ed74b47a7e59b7a42168ab9
 
 ### Prerrequisitos
 
-- [Node.js](https://nodejs.org/) ^20 o superior
-- [npm](https://www.npmjs.com/) ^11 o **yarn** ^1.22
-- Cuenta [Supabase](https://supabase.io) (gratuita)
+- [Node.js](https://nodejs.org/) v20 o superior
+- [npm](https://www.npmjs.com/) v11 o **yarn** v1.22
+- Cuenta en [Supabase](https://supabase.io)
 
 ### Pasos
 
@@ -142,11 +109,11 @@ El diseño sigue el tema **"Cosmos Profondo"**: fondos de nebulosa WebGL interac
 
 3. **Configurar Supabase**
 
-   - Crea un nuevo proyecto en [Supabase Dashboard](https://supabase.io/dashboard)
-   - Ve a **Settings → API** y copia tus valores:
+   - Crear un proyecto en el [Dashboard de Supabase](https://supabase.io/dashboard).
+   - Ir a **Settings → API** y obtener las credenciales:
      - `VITE_SUPABASE_URL`
      - `VITE_SUPABASE_ANON_KEY`
-   - O edita `src/environments/environment.ts` directamente:
+   - O configurar directamente en `src/environments/environment.ts`:
      ```typescript
      export const environment = {
        supabaseUrl: 'TU_URL',
@@ -154,7 +121,7 @@ El diseño sigue el tema **"Cosmos Profondo"**: fondos de nebulosa WebGL interac
      };
      ```
 
-4. **Ejecutar migraciones SQL** (en el SQL Editor de Supabase):
+4. **Ejecutar migraciones SQL** (en el editor SQL de Supabase):
 
    ```sql
    -- Tabla de perfiles
@@ -195,221 +162,158 @@ El diseño sigue el tema **"Cosmos Profondo"**: fondos de nebulosa WebGL interac
    npm start
    ```
 
-   La aplicación se abrirá en `http://localhost:4200`.
+   La aplicación estará disponible en `http://localhost:4200`.
 
 ---
 
-<<<<<<< HEAD
 ## Ejecución Rápida
-=======
-## 🚦 Ejecución Rápida
->>>>>>> d823d3d01a0461a16ed74b47a7e59b7a42168ab9
 
 | Comando | Descripción |
-|---------|-------------|
-| `npm start` | Servidor de desarrollo en `http://localhost:4200` |
-| `npm run build` | Compilación de producción en `dist/` |
-| `npm run watch` | Modo watch con `--configuration development` |
-| `npm test` | Ejecutar pruebas Vitest |
+|---|---|
+| `npm start` | Inicia el servidor de desarrollo en `http://localhost:4200` |
+| `npm run build` | Compila el proyecto para producción en el directorio `dist/` |
+| `npm run watch` | Inicia el modo de compilación continua en desarrollo |
+| `npm test` | Ejecuta la suite de pruebas unitarias |
 
 ---
 
-<<<<<<< HEAD
 ## Uso por Módulo
-=======
-## 📚 Uso por Módulo
->>>>>>> d823d3d01a0461a16ed74b47a7e59b7a42168ab9
 
 ### Autenticación (`/auth`)
 
-- Registro con nombre, email y contraseña
-- Login con credenciales
-- Reenvío de correo de confirmación
-- Cerrar sesión
+- Registro de usuario con nombre, correo electrónico y contraseña.
+- Inicio de sesión con credenciales.
+- Reenvío de correo de confirmación.
+- Cierre de sesión seguro.
 
 ### Cursos (`/courses`)
 
-- **Crear curso**: Agregar nombre, docente opcional y color identificador
-- **Ver cursos**: Grid de tarjetas con badges de color
-- **Eliminar curso**: Confirmación previa — borra tareas, horario y cuaderno asociados
+- **Crear curso**: Registro de nombre, docente asignado y color identificador.
+- **Ver cursos**: Cuadrícula de tarjetas con indicadores de color y avance.
+- **Eliminar curso**: Confirmación previa con eliminación de tareas, horarios y cuadernos asociados.
 
 ### Tareas (`/tasks`)
 
-- **Nueva tarea**: Título, curso opcional (o "General"), fecha límite (solo a partir de hoy)
-- **Ver tareas**: Lista con contador, checkbox para completar/pendiente, eliminar
-- **Fechas vencidas**: Resaltado en rojo con negrita bold
+- **Nueva tarea**: Título, curso vinculado (o "General") y fecha límite.
+- **Gestión de tareas**: Listado con contador, selector de estado completado/pendiente y eliminación.
+- **Alertas de vencimiento**: Resaltado visual para entregas fuera de plazo.
 
 ### Horario (`/schedule`)
 
-- **Agregar clase**: Seleccionar curso, día (Lunes-Viernes), hora inicio/fin, ubicación
-- **Ver horario**: Cuadrícula continua Lunes-Viernes con bloques superpuestos
-- **Eliminar bloque**: Botón en cada bloque de clase
+- **Agregar clase**: Selección de curso, día de la semana (Lunes-Viernes), rango de horas y aula/ubicación.
+- **Visualización**: Cuadrícula semanal con bloques superpuestos.
+- **Eliminar clase**: Opción de borrado directo sobre cada bloque.
 
 ### Cuadernos (`/notebooks`)
 
-- **Crear cuaderno**: Automático por curso al primera acceso
-- **Guardar página**: Datos de dibujo guardados en Supabase o localStorage
-- **Listar cuadernos**: Ver todos los cuadernos por curso
-- **Renombrar/Eliminar**: Acciones sobre el cuaderno seleccionado
+- **Creación automática**: Generación de cuaderno al acceder por primera vez a un curso.
+- **Guardado**: Persistencia de contenido en Supabase con respaldo local en `localStorage`.
+- **Administración**: Renombrar, listar o eliminar cuadernos existentes.
 
 ### Configuración (`/settings`)
 
-- Ver/editar nombre y email del perfil
-- Cambiar contraseña (via Supabase)
-- Cerrar sesión
+- Consulta y actualización de datos de perfil (nombre y correo).
+- Actualización de contraseña a través de Supabase.
+- Cierre de sesión.
 
-### Galaxia (Fondo)
+### Fondo Galaxia (WebGL)
 
-- El fondo WebGL sigue al cursor con 2 capas de parallax
-- Deriva sutil que acelera con scroll de página
-- Se pausa en pestañas inactivas y modo reduced-motion
-- El scroll hacia abajo realza el tono cian
+- Fondo interactivo con seguimiento del cursor en dos capas de parallax.
+- Deriva visual ajustada con el desplazamiento vertical (scroll).
+- Pausa automática en pestañas inactivas o cuando el sistema tiene habilitado `prefers-reduced-motion`.
 
 ---
 
-<<<<<<< HEAD
 ## Estado Actual
-=======
-## 🌐 Estado Actual
->>>>>>> d823d3d01a0461a16ed74b47a7e59b7a42168ab9
 
-> **⚠️ Esta aplicación está finalizada con interfaz funcional, pero aún requiere conectar Supabase completamente.**
+> **Nota:** La aplicación cuenta con una interfaz totalmente funcional en modo demostración. Para habilitar la persistencia en la nube es necesario conectar una instancia de Supabase.
 
-### Hecho ✅
+### Funcionalidades Implementadas
 
-- Arquitectura Angular 22 con signals y standalone components
-- Servicios completos: Auth, AppState, Notebook
-- UI completa con 7 módulos navegables
-- WebGL shader "Cosmos Profondo" personalizado
-- Efectos Halo directive, sidebar vidrio, responsive
-- Datos de demostración funcionando en `AppStateService`
+- Arquitectura Angular 22 con Signals y componentes Standalone.
+- Servicios principales: `AuthService`, `AppStateService`, `NotebookService`.
+- Interfaz completa con 7 vistas navegables.
+- Shader WebGL "Cosmos Profundo" integrado.
+- Directiva de interacción tipo halo, barra lateral con efecto translúcido y diseño responsive.
+- Soporte para datos de demostración en `AppStateService`.
 
-### Por Hacer 📋
+### Tareas Pendientes
 
-- [ ] Conectar Supabase Auth persistente (guardado en `environment.ts`)
-- [ ] Ejecutar migraciones SQL completas en tu proyecto Supabase
-- [ ] Proteger rutas con `canActivate` guard
-- [ ] Subir imágenes de portada de cursos (`cover` field)
-- [ ] Sincronizar `notebooks` y `notebook_pages` con Supabase
-- [ ] Agregar calendario full-calendar integration
-- [ ] Tests unitarios completos
-- [ ] Internacionalización (i18n)
-- [ ] Modo oscuro/claro toggle
+- [ ] Configuración de credenciales de Supabase en `environment.ts`.
+- [ ] Ejecución de migraciones SQL en la base de datos de producción.
+- [ ] Implementación de `canActivate` Guards en rutas protegidas.
+- [ ] Carga y almacenamiento de portadas para cursos.
+- [ ] Sincronización en tiempo real de cuadernos y páginas con Supabase.
+- [ ] Integración de vista de calendario extendida.
+- [ ] Ampliación de cobertura de pruebas unitarias.
+- [ ] Soporte para internacionalización (i18n).
+- [ ] Selector de tema visual (claro / oscuro).
 
 ---
 
-<<<<<<< HEAD
 ## Scripts Disponibles
-=======
-## 📜 Scripts Disponibles
->>>>>>> d823d3d01a0461a16ed74b47a7e59b7a42168ab9
 
 | Script | Descripción |
-|--------|-------------|
-| `npm start` | `ng serve` — Desarrollo local con hot-reload |
-| `npm run build` | `ng build` — Compilación de producción |
-| `npm run watch` | `ng build --watch --configuration development` — Vigilar cambios |
-| `npm test` | `ng test` — Ejecutar suite de pruebas Vitest |
+|---|---|
+| `npm start` | Ejecuta `ng serve` para desarrollo local con recarga en caliente |
+| `npm run build` | Ejecuta `ng build` para generar los archivos de producción |
+| `npm run watch` | Ejecuta `ng build --watch` en configuración de desarrollo |
+| `npm test` | Ejecuta las pruebas automatizadas con Vitest |
 
 ---
 
-<<<<<<< HEAD
 ## Contribución
-=======
-## 🤝 Contribución
->>>>>>> d823d3d01a0461a16ed74b47a7e59b7a42168ab9
 
-Las contribuciones son bienvenidas. Por favor:
+1. Crear un **Fork** del repositorio.
+2. Crear una nueva rama: `git checkout -b feature/nueva-funcionalidad`.
+3. Confirmar los cambios: `git commit -m 'feat: descripción del cambio'`.
+4. Enviar los cambios a la rama remota: `git push origin feature/nueva-funcionalidad`.
+5. Abrir un **Pull Request**.
 
-1. **Fork** el repositorio
-2. Crea una rama: `git checkout -b feature/nueva-funcionalidad`
-3. Commit tus cambios: `git commit -m 'Añadir nueva funcionalidad'`
-4. Push a la rama: `git push origin feature/nueva-funcionalidad`
-5. Abre un **Pull Request**
+### Pautas de Código
 
-### Guías de contribución
-
-- Mantén el estilo de código existente (Prettier configurado)
-- No modifiques `environment.ts` con credenciales reales en commits públicos
-- Añade tests para nueva funcionalidad
-- Actualiza la documentación si cambian APIs públicas
-- Sigue el patrón "Cosmos Profundo" en nuevos componentes/estilos
+- Mantener la consistencia con el formateo de Prettier configurado.
+- No incluir credenciales reales ni claves privadas en `environment.ts`.
+- Incluir pruebas unitarias para nuevas funcionalidades.
+- Actualizar la documentación en caso de modificar la estructura o los comandos.
 
 ---
 
-<<<<<<< HEAD
 ## Licencia
-=======
-## 📄 Licencia
->>>>>>> d823d3d01a0461a16ed74b47a7e59b7a42168ab9
 
-Este proyecto está bajo la **Licencia MIT**.
-
-> Copyright (c) 2026 UniSpace. Para más detalles, consulta el archivo `LICENSE`.
+Distribuido bajo la **Licencia MIT**. Para más información, consulte el archivo `LICENSE`.
 
 ---
 
-<<<<<<< HEAD
 ## Capturas de Pantalla
-=======
-## 📸 Capturas de Pantalla
->>>>>>> d823d3d01a0461a16ed74b47a7e59b7a42168ab9
 
 <details>
-  <summary>Ver capturas</summary>
+  <summary>Desplegar módulos</summary>
 
 | Módulo | Descripción |
-|--------|-------------|
-<<<<<<< HEAD
-| Dashboard | Página principal con galaxia interactiva y resumen rápido |
-| Courses | Grid de cursos con badges de color y acciones |
-| Tasks | Lista de tareas con checkbox y estado vencido |
-| Schedule | Cuadrícula horaria Lunes-Viernes con bloques superpuestos |
-| Notebooks | Gestión de cuadernos por curso |
-| Sidebar | Menú lateral colapsable en mobile |
-=======
-| <kbd>Dashboard</kbd> | Página principal con galaxia interactiva y resumen rápido |
-| <kbd>Courses</kbd> | Grid de cursos con badges de color y acciones |
-| <kbd>Tasks</kbd> | Lista de tareas con checkbox y estado vencido |
-| <kbd>Schedule</kbd> | Cuadrícula horaria Lunes-Viernes con bloques superpuestos |
-| <kbd>Notebooks</kbd> | Gestión de cuadernos por curso |
-| <kbd>Sidebar</kbd> | Menú lateral colapsable en mobile |
->>>>>>> d823d3d01a0461a16ed74b47a7e59b7a42168ab9
+|---|---|
+| Dashboard | Vista principal con fondo interactivo y resumen general |
+| Courses | Panel de cursos con etiquetas de color y métricas |
+| Tasks | Control de tareas con estados y fechas límite |
+| Schedule | Planificador semanal de clases por franjas horarias |
+| Notebooks | Gestión y edición de notas por materia |
+| Sidebar | Navegación lateral responsiva y colapsable |
 
 </details>
 
 ---
 
-<<<<<<< HEAD
 ## Preguntas Frecuentes
-=======
-## 🙋‍♂️ Preguntas Frecuentes
->>>>>>> d823d3d01a0461a16ed74b47a7e59b7a42168ab9
 
-**¿Necesito configurar Supabase para usar la app?**
+**¿Es obligatorio configurar Supabase para probar la aplicación?**  
+No. La aplicación incluye datos de demostración locales que permiten navegar y probar la interfaz sin necesidad de configurar una base de datos inmediatamente.
 
-No necesariamente. La app funciona completamente con datos de demostración fuera de línea. Sin embargo, para persistencia real, autenticación y storage de archivos, sí es necesario configurar Supabase.
+**¿Funciona sin conexión a internet?**  
+La aplicación permite la interacción básica y almacena datos de cuadernos en `localStorage`. Las funciones de sincronización y autenticación remota requieren conexión a internet.
 
-**¿Puedo usar la app sin conexión?**
+**¿El fondo WebGL genera alto consumo de recursos?**  
+El shader está optimizado para WebGL 1.0 sin dependencias externas pesadas. Se pausa automáticamente en pestañas inactivas o si el usuario tiene activada la reducción de movimiento en su sistema operativo.
 
-La interfaz funciona sin conexión usando `localStorage` fallback para cuadernos. Las funciones que requieren Supabase (auth, cursos, tareas, horario) necesitan conexión.
+**¿Cómo personalizar la paleta de colores?**  
+Las variables principales de estilo están definidas en `src/styles.scss` (`--primary`, `--primary-light`, `--ink`, `--accent-light`).
 
-**¿El fondo WebGL afecta el rendimiento?**
-
-El shader está optimizado para WebGL1 sin dependencias externas. En dispositivos móviles o con `prefers-reduced-motion`, el fondo se pauso automáticamente para ahorrar recursos.
-
-**¿Cómo cambio el color/theme principal?**
-
-Los colores principales se definen en las variables CSS `--primary`, `--primary-light`, `--ink`, `--accent-light`. Puedes sobrescribirlas en el archivo `src/styles.scss` o usando atributos `style` en el elemento `<app-root>`.
-
----
-
-<<<<<<< HEAD
-### Hecho con amor por UniSpace
-
-*Sigue el viaje academico entre las estrellas.*
-=======
-### Hecho con ❤️ por UniSpace
-
-*Sigue el viaje académico entre las estrellas.*
->>>>>>> d823d3d01a0461a16ed74b47a7e59b7a42168ab9
