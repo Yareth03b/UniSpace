@@ -1,0 +1,264 @@
+/* ============================================================
+   COSMOS PROFUNDO 2.0 — Sistema de diseño global
+   Fondo: nebulosa fluida WebGL (app-nebula-background)
+   Tipografía: Cinzel Decorative (display) · Space Grotesk (UI)
+   ============================================================ */
+
+:root {
+    /* Paleta - Colores oscuros, profundos y elegantes */
+    --cosmos-bg: #070b16;
+    --ink: #f1f5f9;
+    --ink-dim: #94a3b8;
+    --primary: #3730a3;         /* Índigo profundo */
+    --primary-light: #4f46e5;   /* Índigo real */
+    --primary-hover: #312e81;
+    --accent: #2563eb;          /* Azul zafiro */
+    --accent-light: #3b82f6;    /* Azul celestial */
+    --accent-dark: #1e3a8a;     /* Azul noche */
+    --emerald: #059669;         /* Esmeralda suave */
+    --violet: #7c3aed;          /* Violeta cósmico */
+    --amber: #d97706;           /* Ámbar para advertencias */
+    --danger: #dc2626;          /* Rojo para errores */
+
+    /* Glassmorphism */
+    --glass-bg: linear-gradient(165deg, rgba(15, 23, 42, .82), rgba(8, 14, 30, .75));
+    --glass-border: rgba(99, 102, 241, .18);
+    --glass-hover: rgba(99, 102, 241, .14);
+
+    /* Tipografía */
+    --font-display: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+    --font-body: 'DM Sans', Inter, ui-sans-serif, system-ui, sans-serif;
+
+    color-scheme: dark;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    min-width: 320px;
+    min-height: 100vh;
+    background: var(--cosmos-bg);
+    color: var(--ink);
+    font-family: var(--font-body);
+    font-synthesis: none;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+}
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+::selection {
+    background: rgba(79, 70, 229, .35);
+    color: #ffffff;
+}
+
+:focus-visible {
+    outline: 2px solid var(--accent-light);
+    outline-offset: 2px;
+}
+
+/* Scrollbar cósmica */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(99, 102, 241, .25);
+    border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(99, 102, 241, .45);
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+/* ---------- Utilidades ---------- */
+
+.glass {
+    background: var(--glass-bg);
+    backdrop-filter: blur(18px) saturate(1.25);
+    -webkit-backdrop-filter: blur(18px) saturate(1.25);
+    border: 1px solid var(--glass-border);
+    border-radius: 6px;
+}
+
+.gradient-text {
+    background: linear-gradient(92deg, #93c5fd, #818cf8 55%, #c084fc);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+/* ---------- Halo Activo ---------- */
+
+.halo-host {
+    position: relative;
+    overflow: hidden;
+}
+
+.halo-ripple {
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%) scale(.25);
+    background: radial-gradient(circle,
+            rgba(99, 102, 241, .4), rgba(59, 130, 246, .2) 42%, transparent 70%);
+    animation: halo-expand .7s ease-out forwards;
+    z-index: 0;
+}
+
+@keyframes halo-expand {
+    to {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0;
+    }
+}
+
+/* El contenido real queda sobre la onda (sin afectar al ripple) */
+.halo-host > :not(.halo-ripple) {
+    position: relative;
+    z-index: 1;
+}
+
+/* La onda SIEMPRE es absoluta y queda bajo el contenido */
+.halo-host .halo-ripple {
+    position: absolute !important;
+}
+
+/* ============================================================
+   SUPERFICIES CÓSMICAS GLOBALES
+   ============================================================ */
+
+.content section,
+.content article,
+.content .panel,
+.content .notebook,
+.content .notebook-card,
+.content .empty-state {
+    background: var(--glass-bg) !important;
+    border: 1px solid var(--glass-border) !important;
+    border-radius: 8px !important;
+    backdrop-filter: blur(14px) saturate(1.15);
+    box-shadow: 0 12px 34px rgba(2, 6, 18, .45);
+}
+
+.content h1 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    letter-spacing: .01em;
+    text-shadow: 0 0 26px rgba(99, 102, 241, .25);
+}
+
+.content p,
+.content small,
+.content time,
+.content span,
+.content label,
+.content td,
+.content th {
+    color: var(--ink-dim);
+}
+
+.content strong,
+.content b,
+.content h2,
+.content h3,
+.content a {
+    color: var(--ink);
+}
+
+.content * {
+    border-color: rgba(99, 102, 241, .15);
+}
+
+/* Botones primarios elegantes y oscuros con texto blanco nítido */
+.content .primary,
+.content > header button,
+.content section > button,
+.content form button[type=submit] {
+    background: linear-gradient(135deg, var(--primary), var(--primary-light)) !important;
+    color: #ffffff !important;
+    border: 0 !important;
+    border-radius: 6px !important;
+    font-weight: 600 !important;
+    box-shadow: 0 6px 20px rgba(55, 48, 163, .35) !important;
+    transition: filter .2s, transform .2s;
+}
+
+.content .primary:hover,
+.content > header button:hover,
+.content section > button:hover,
+.content form button[type=submit]:hover {
+    filter: brightness(1.12);
+    transform: translateY(-1px);
+}
+
+/* Campos de texto oscuros */
+.content input,
+.content select,
+.content textarea {
+    background: rgba(6, 11, 26, .78) !important;
+    border: 1px solid rgba(99, 102, 241, .22) !important;
+    color: var(--ink) !important;
+    caret-color: var(--accent-light);
+}
+
+.content input:focus,
+.content select:focus,
+.content textarea:focus {
+    border-color: var(--accent-light) !important;
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, .2) !important;
+    outline: none !important;
+}
+
+.content input::placeholder,
+.content textarea::placeholder {
+    color: rgba(148, 163, 184, .55);
+}
+
+/* Insignias / estados */
+.content b {
+    background: rgba(79, 70, 229, .15) !important;
+    color: #c7d2fe !important;
+}
+
+/* Barras de progreso con gradiente índigo */
+.content .bar i,
+.content .course-progress i {
+    background: linear-gradient(90deg, var(--primary), var(--primary-light)) !important;
+}
+
+/* Movimiento reducido */
+@media (prefers-reduced-motion: reduce) {
+    .halo-ripple {
+        animation-duration: .01ms;
+        opacity: 0;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: .01ms !important;
+        transition-duration: .01ms !important;
+    }
+}

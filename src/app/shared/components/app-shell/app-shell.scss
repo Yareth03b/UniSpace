@@ -1,0 +1,290 @@
+/* ============================================================
+   App Shell · Cosmos Profondo 2.0 · esquinas rectas
+   ============================================================ */
+
+.layout {
+  min-height: 100vh;
+  display: flex;
+}
+
+/* ---------- Sidebar de vidrio ---------- */
+.sidebar {
+  width: 250px;
+  padding: 24px 14px 16px;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  inset: 0 auto 0 0;
+  background: linear-gradient(168deg, rgba(16, 25, 50, .72), rgba(6, 10, 22, .66));
+  backdrop-filter: blur(20px) saturate(1.3);
+  -webkit-backdrop-filter: blur(20px) saturate(1.3);
+  border-right: 1px solid var(--glass-border);
+  box-shadow: 12px 0 44px rgba(2, 6, 18, .5);
+  z-index: 5;
+  overflow: hidden;
+}
+
+/* Marca: emblema SVG con degradado de luz */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  text-decoration: none;
+  padding: 4px 8px 10px;
+}
+
+.mark {
+  display: grid;
+  place-items: center;
+}
+
+.mark svg {
+  display: block;
+  filter: drop-shadow(0 0 10px rgba(79, 125, 255, .35));
+}
+
+.brand-name {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 21px;
+  letter-spacing: .02em;
+  background: linear-gradient(92deg, #e3f7ff, #8fd8ff 48%, #b9a9ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.workspace {
+  color: rgba(159, 176, 208, .75);
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: .26em;
+  margin: 26px 10px 10px;
+}
+
+/* ---------- Navegación ---------- */
+nav {
+  display: grid;
+  gap: 3px;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--ink-dim);
+  padding: 7px 10px;
+  border-radius: 5px;
+  font-size: 14.5px;
+  font-weight: 500;
+  display: flex;
+  gap: 11px;
+  align-items: center;
+  transition: color .18s, background .18s;
+}
+
+/* Chip del icono: se enciende con índigo elegante al hover */
+.ico {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 6px;
+  font-size: 16px;
+  background: rgba(99, 102, 241, .10);
+  border: 1px solid rgba(99, 102, 241, .18);
+  color: var(--ink-dim);
+  transition: background .2s, box-shadow .2s, color .2s, border-color .2s;
+}
+
+nav a:hover {
+  color: var(--ink);
+  background: var(--glass-hover);
+}
+
+nav a:hover .ico {
+  background: linear-gradient(135deg, var(--primary), var(--primary-light));
+  border-color: rgba(99, 102, 241, .4);
+  color: #ffffff;
+  box-shadow: 0 4px 16px rgba(79, 70, 229, .4);
+}
+
+/* Activo: fondo índigo sutil + borde luminoso */
+nav a.active {
+  background: linear-gradient(165deg, rgba(79, 70, 229, .22), rgba(59, 130, 246, .14));
+  border: 1px solid rgba(129, 140, 248, .35);
+  color: #ffffff;
+  font-weight: 700;
+  box-shadow: inset 0 0 22px rgba(79, 70, 229, .15);
+}
+
+nav a.active .ico {
+  background: linear-gradient(135deg, var(--primary), var(--primary-light));
+  border-color: rgba(129, 140, 248, .5);
+  color: #ffffff;
+  box-shadow: 0 4px 18px rgba(79, 70, 229, .45);
+}
+
+/* ---------- Cuenta: perfil clicable + menú ---------- */
+.profile-wrap {
+  position: relative;
+  margin-top: auto;
+  padding-top: 14px;
+  border-top: 1px solid rgba(140, 180, 255, .12);
+}
+
+.profile {
+  width: 100%;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  padding: 8px 9px;
+  cursor: pointer;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  transition: background .18s, border-color .18s;
+}
+
+.profile:hover,
+.profile.open {
+  background: rgba(120, 170, 255, .08);
+  border-color: var(--glass-border);
+}
+
+.profile .who {
+  flex: 1;
+  min-width: 0;
+}
+
+.profile strong {
+  display: block;
+  font-size: 13.5px;
+  color: var(--ink);
+}
+
+.profile small {
+  display: block;
+  color: var(--ink-dim);
+  font-size: 11px;
+  margin-top: 2px;
+}
+
+.chev {
+  flex-shrink: 0;
+  margin-left: auto;
+  color: var(--ink-dim);
+  transition: transform .2s ease;
+}
+
+.profile.open .chev {
+  transform: rotate(180deg);
+}
+
+.account-menu {
+  position: absolute;
+  left: 6px;
+  right: 6px;
+  bottom: calc(100% + 10px);
+  display: grid;
+  gap: 2px;
+  padding: 6px;
+  background: rgba(16, 26, 51, .97);
+  backdrop-filter: blur(20px) saturate(1.25);
+  -webkit-backdrop-filter: blur(20px) saturate(1.25);
+  border: 1px solid var(--glass-border);
+  border-radius: 6px;
+  box-shadow: 0 -18px 50px rgba(2, 6, 18, .65);
+  z-index: 40;
+  animation: menu-pop .16s ease-out;
+}
+
+@keyframes menu-pop {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.account-menu a,
+.account-menu button {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  width: 100%;
+  text-decoration: none;
+  color: var(--ink-dim);
+  background: transparent;
+  border: 0;
+  border-radius: 5px;
+  padding: 10px 11px;
+  font-size: 13.5px;
+  font-weight: 500;
+  cursor: pointer;
+  text-align: left;
+  transition: background .15s, color .15s;
+}
+
+.account-menu a:hover,
+.account-menu button:hover {
+  color: var(--ink);
+  background: rgba(120, 170, 255, .09);
+}
+
+.account-menu button.danger {
+  color: #ff8fa8;
+}
+
+.account-menu button.danger:hover {
+  color: #ffc4d0;
+  background: rgba(255, 99, 132, .10);
+}
+
+.avatar {
+  flex-shrink: 0;
+  color: #ffffff;
+  background: linear-gradient(135deg, var(--primary), var(--violet));
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 12px;
+  font-weight: 700;
+  box-shadow: 0 0 18px rgba(99, 102, 241, .4);
+}
+
+/* ---------- Contenido ---------- */
+.content {
+  width: calc(100% - 250px);
+  margin-left: 250px;
+  padding: 38px 48px 60px;
+  min-height: 100vh;
+}
+
+/* Inicio a pantalla completa sin scroll */
+.content:has(.dash) {
+  padding: 26px 40px 30px;
+}
+
+/* ---------- Responsivo ---------- */
+@media (max-width: 720px) {
+  .sidebar {
+    width: 74px;
+    padding: 20px 9px 14px;
+    align-items: center;
+  }
+
+  .brand { justify-content: center; padding: 0; }
+  .brand-name,
+  .workspace,
+  .sidebar nav span:last-child,
+  .profile .who { display: none; }
+
+  nav a { justify-content: center; padding: 6px; }
+  .profile { justify-content: center; padding-inline: 0; }
+  .content {
+    width: calc(100% - 74px);
+    margin-left: 74px;
+    padding: 24px 16px 40px;
+  }
+}
