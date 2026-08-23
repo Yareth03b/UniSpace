@@ -6,9 +6,8 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test",
-    "predeploy": "ng build",
-    "deploy": "gh-pages -d dist/UniSpace"
+    "predeploy": "ng build --base-href /UniSpace/",
+    "deploy": "gh-pages -d dist/UniSpace/browser"
   },
   "private": true,
   "packageManager": "npm@11.17.0",
