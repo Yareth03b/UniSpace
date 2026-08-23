@@ -17,7 +17,12 @@ export class AuthService {
   }
 
   async signUp(fullName: string, email: string, password: string): Promise<string | null> {
-    const { error } = await this.client.auth.signUp({ email, password, options: { data: { full_name: fullName }, emailRedirectTo: window.location.origin } });
+    const redirectUrl = window.location.origin + window.location.pathname;
+    const { error } = await this.client.auth.signUp({
+      email,
+      password,
+      options: { data: { full_name: fullName }, emailRedirectTo: redirectUrl }
+    });
     return error?.message ?? null;
   }
 
@@ -27,7 +32,12 @@ export class AuthService {
   }
 
   async resendConfirmation(email: string): Promise<string | null> {
-    const { error } = await this.client.auth.resend({ type: 'signup', email, options: { emailRedirectTo: window.location.origin } });
+    const redirectUrl = window.location.origin + window.location.pathname;
+    const { error } = await this.client.auth.resend({
+      type: 'signup',
+      email,
+      options: { emailRedirectTo: redirectUrl }
+    });
     return error?.message ?? null;
   }
 
