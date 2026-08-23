@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="g" x1="0" y1="64" x2="64" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#22d3ee"/>
+      <stop offset=".5" stop-color="#4f7dff"/>
+      <stop offset="1" stop-color="#b45cf7"/>
+    </linearGradient>
+  </defs>
+  <g fill="none" stroke="url(#g)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Birrete -->
+    <path d="M32 6 57 16 32 26 7 16Z"/>
+    <path d="M17 23v5c0 3.6 6.7 6 15 6s15-2.4 15-6v-5"/>
+    <!-- Libro abierto -->
+    <path d="M9 51c6-7 16-8 23-3 7-5 17-4 23 3l-3.5 4c-5-6-13-6.6-19.5-2.6C25.5 48.4 17.5 49 12.5 55Z"/>
+    <!-- Flecha de progreso -->
+    <path d="M46 47c6-4 9-10 9-18"/>
+    <path d="m49 34 6-6 6 7"/>
+  </g>
+</svg>
