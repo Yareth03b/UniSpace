@@ -47,9 +47,20 @@ interface NotebookImage {
   height: number;
 }
 
+interface NotebookText {
+  id: string;
+  text: string;
+  x: number;
+  y: number;
+  fontSize: number;
+  fontFamily: string;
+  color: string;
+}
+
 interface PageData {
   strokes: Stroke[];
   images: NotebookImage[];
+  texts?: NotebookText[];
 }
 
 /** PDF abierto en la sesión actual (solo memoria) */
@@ -878,7 +889,8 @@ export class NotebooksComponent implements AfterViewInit, OnInit {
   private imageElementsCache = new Map<string, HTMLImageElement>();
 
   // Herramientas de dibujo
-  selectedTool: 'pencil' | 'eraser' | 'move' = 'pencil';
+  // Herramientas de dibujo
+  selectedTool: 'pencil' | 'eraser' | 'move' | 'text' = 'pencil';
   selectedPencilType: 'ballpoint' | 'calligraphy' | 'highlighter' = 'ballpoint';
   selectedColor = '#000000';
   brushWidth = 3;
@@ -887,6 +899,17 @@ export class NotebooksComponent implements AfterViewInit, OnInit {
   eraserMode: 'stroke' | 'pixels' = 'stroke';
   private lastErase: { x: number; y: number } | null = null;
   colors = ['#000000', '#ea4335', '#004fe6', '#0f9d58'];
+
+  // Tipografías bonitas
+  selectedFontFamily = 'Caveat';
+  selectedFontSize = 32;
+  fontFamilies = [
+    { name: 'Caligrafía (Caveat)', value: 'Caveat' },
+    { name: 'Pincel (Pacifico)', value: 'Pacifico' },
+    { name: 'Arquitecto (Architects Daughter)', value: 'Architects Daughter' },
+    { name: 'Escolar (Patrick Hand)', value: 'Patrick Hand' },
+    { name: 'Molde (Arial)', value: 'Arial' }
+  ];
 
   // Control de trazado
   private isDrawing = false;
@@ -900,9 +923,11 @@ export class NotebooksComponent implements AfterViewInit, OnInit {
   // Trazos abiertos (sin soltar) para poder cancelarlos si llega un segundo dedo
   private openStrokes: { idx: number; stroke: Stroke }[] = [];
 
-  // Estado de mover imágenes
+  // Estado de mover imágenes / textos
   private isDraggingImage = false;
   private selectedImageIndex: number | null = null;
+  private isDraggingText = false;
+  private selectedTextIndex: number | null = null;
   private dragOffset = { x: 0, y: 0 };
 
   // Panel lateral desplegable y redimensionable

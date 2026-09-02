@@ -1,10 +1,11 @@
 import { Component, inject, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { RouterLink } from '@angular/router';
 import { AppStateService } from '../../core/services/app-state.service';
 import { Course } from '../../core/models/course.model';
 
 @Component({
-  imports: [FormsModule],
+  imports: [FormsModule, RouterLink],
   template: `
     <header>
       <div>
@@ -57,6 +58,16 @@ import { Course } from '../../core/models/course.model';
             </div>
             <h2>{{ course.name }}</h2>
             <p>{{ course.teacher ? course.teacher : 'Sin docente asignado' }}</p>
+            <div class="card-links">
+              <a routerLink="/flashcards" class="chip-link">
+                <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="16" height="14" rx="3"/><path d="M6 7V5a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-2"/></svg>
+                Flashcards
+              </a>
+              <a routerLink="/notebooks" class="chip-link">
+                <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/></svg>
+                Cuaderno
+              </a>
+            </div>
           </article>
         }
       </div>
@@ -167,6 +178,19 @@ import { Course } from '../../core/models/course.model';
 
     .course-card h2 { font-size: 17px; color: var(--ink); font-weight: 600; }
     .course-card p { font-size: 13px; color: var(--ink-dim); }
+
+    .card-links { display: flex; gap: 8px; margin-top: 6px; }
+    .chip-link {
+      display: inline-flex; align-items: center; gap: 5px;
+      font-size: 11.5px; font-weight: 600; text-decoration: none;
+      color: var(--ink-dim); background: rgba(255, 255, 255, .05);
+      border: 1px solid var(--glass-border); border-radius: 5px;
+      padding: 5px 9px; transition: all .2s;
+    }
+    .chip-link:hover {
+      background: rgba(99, 102, 241, .2); color: var(--accent-light);
+      border-color: var(--accent-light);
+    }
 
     .empty-state {
       text-align: center; max-width: 500px;

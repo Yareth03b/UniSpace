@@ -2,6 +2,7 @@ import { Routes } from '@angular/router';
 import { CalendarComponent } from './features/calendar/calendar';
 import { CoursesComponent } from './features/courses/courses';
 import { DashboardComponent } from './features/dashboard/dashboard';
+import { FlashcardsComponent } from './features/flashcards/flashcards';
 import { NotebooksComponent } from './features/notebooks/notebooks';
 import { SettingsComponent } from './features/settings/settings';
 import { ScheduleComponent } from './features/schedule/schedule';
@@ -12,6 +13,7 @@ export const routes: Routes = [
   { path: 'courses', component: CoursesComponent, title: 'Cursos | UniSpace' },
   { path: 'tasks', component: TasksComponent, title: 'Tareas | UniSpace' },
   { path: 'notebooks', component: NotebooksComponent, title: 'Cuadernos | UniSpace' },
+  { path: 'flashcards', component: FlashcardsComponent, title: 'Flashcards | UniSpace' },
   { path: 'calendar', component: CalendarComponent, title: 'Calendario | UniSpace' },
   { path: 'schedule', component: ScheduleComponent, title: 'Horario | UniSpace' },
   { path: 'settings', component: SettingsComponent, title: 'Ajustes | UniSpace' },
